@@ -1,3 +1,4 @@
+/* Estilo base */
 html, body {
     height: 100%;
     margin: 0;
@@ -13,7 +14,7 @@ html, body {
 }
 
 header {
-    padding-top: 1500px; /* Ajustado para exemplo */
+    padding-top: 3000px; /* Ajustado para exemplo */
     font-family: 'OCR A Std', monospace;
     text-align: center;
     margin-bottom: 20px;
@@ -69,8 +70,8 @@ main {
     opacity: 0;
     animation: fadeIn 1s forwards;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* Adicionado para garantir que o botão seja posicionado corretamente */
-    padding-bottom: 70px; /* Adicionado para criar espaço suficiente para o botão */
+    position: relative;
+    padding-bottom: 70px;
 }
 
 .card-image {
@@ -106,10 +107,10 @@ main {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-    position: absolute; /* Mantém o botão fora do fluxo normal do layout */
-    bottom: 20px; /* Distância da parte inferior do cartão */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajusta a posição horizontal para centralizar */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .buy-button:hover {
@@ -152,5 +153,93 @@ main {
     }
     to {
         opacity: 1;
+    }
+}
+
+/* Media Queries */
+
+/* Para tablets e dispositivos móveis pequenos */
+@media (max-width: 768px) {
+    header {
+        padding-top: 1500px; /* Ajuste para o tamanho do header */
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+    main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        padding: 15px;
+        padding-bottom: 50px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .product-name {
+        font-size: 18px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .buy-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Para dispositivos móveis muito pequenos */
+@media (max-width: 480px) {
+    header {
+        padding-top: 1500px; /* Ajuste para o tamanho do header */
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+    main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        padding: 10px;
+        padding-bottom: 40px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .product-name {
+        font-size: 16px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .buy-button {
+        font-size: 12px;
+        padding: 6px 12px;
     }
 }
